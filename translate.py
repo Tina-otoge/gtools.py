@@ -1,4 +1,4 @@
-from utils import get_text
+from utils import get_text, no_googletrans
 
 text = get_text()
 lang = 'en'
@@ -13,12 +13,7 @@ if len(text) > 4:
 try:
     from googletrans import Translator
 except ModuleNotFoundError:
-    msg  = 'ERROR : This script requires googletrans module by SuHun Han.\n'
-    msg += '==========\n'
-    msg += 'pypi  : https://pypi.python.org/pypi/googletrans\n'
-    msg += 'GitHub: https://github.com/ssut/py-googletrans'
-    print(msg)
-    exit()
+    no_googletrans()
 
 translator = Translator()
 try:

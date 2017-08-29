@@ -6,3 +6,10 @@ def get_text():
             r += arg + ' '
         return r[:-1]
     return r
+def no_googletrans():
+    msg  = 'ERROR : This script requires googletrans module by SuHun Han.\n'
+    msg += '==========\n'
+    msg += 'pypi  : https://pypi.python.org/pypi/googletrans\n'
+    msg += 'GitHub: https://github.com/ssut/py-googletrans'
+    print(msg)
+    exit()
