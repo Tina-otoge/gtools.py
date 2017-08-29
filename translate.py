@@ -20,16 +20,17 @@ except ModuleNotFoundError:
     print(msg)
     exit()
 
+translator = Translator()
 try:
-    result = Translator().translate(text, dest=lang)
+    result = translator.translate(text, dest=lang)
 except ValueError as e:
     if str(e) != 'invalid destination language':
         raise e
     print('WARNING : Invalid destination language. Defaulting to english.')
     lang = 'en'
-    result = Translator().translate(text, dest=lang)
+    result = translator.translate(text, dest=lang)
 
-pronunciation = Translator().translate(result.text, dest=lang).pronunciation
+pronunciation = translator.translate(result.text, dest=lang).pronunciation
 if pronunciation == result.text:
     pronunciation = None
 print('== Translation ==')
