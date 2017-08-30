@@ -9,7 +9,7 @@ def get_text():
 def no_googletrans():
     msg  = 'ERROR : This script requires googletrans module by SuHun Han.\n'
     msg += '==========\n'
-    msg += 'pypi  : https://pypi.python.org/pypi/googletrans\n'
-    msg += 'GitHub: https://github.com/ssut/py-googletrans'
+    msg += 'PyPI   : https://pypi.python.org/pypi/googletrans\n'
+    msg += 'GitHub : https://github.com/ssut/py-googletrans'
     print(msg)
     exit()
